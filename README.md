@@ -9,6 +9,12 @@ Requires Node.js 22.13 or later.
 - `npm test` checks authentication, role enforcement, cross-portal handoffs, attachment access, sandbox isolation, administrator changes and concurrent retries.
 - `npm run build` packages the TypeScript authentication module, JavaScript workflow engine and browser UI into a Cloudflare Worker. Hosted data uses D1.
 
+## Public portfolio demo
+
+The Render deployment runs the same server and workflows with temporary, in-memory SQLite and fictional records. Visitors can open it directly and choose a sample account. Demo workspaces reset when the service restarts.
+
+For a Node deployment, use `npm run build` and `npm start`. Set `RENDER_EXTERNAL_URL` to the public HTTPS origin when using a compatible reverse proxy outside Render. The service listens on `PORT` and exposes `/api/health`.
+
 ## Demo accounts
 
 Use `ClaimsDemo2026!` with `client@claimdesk.test`, `officer@claimdesk.test`, `support@claimdesk.test` or `admin@claimdesk.test`. The sign-in screen fills in the sample credentials when you select an account. Sign out and back in to continue the same sandbox under another role.
